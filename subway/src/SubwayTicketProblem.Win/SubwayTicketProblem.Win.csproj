@@ -79,8 +79,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SubwayTicketProblem.Library\SubwayTicketProblem.Library.csproj">
-      <Project>{D5F0EC04-034E-4501-8836-C2F27DDD409C}</Project>
+    <ProjectReference Include="..\SubwayTicketProblem.Library\SubwayTicketProblem.Library.csproj">
+      <Project>{d5f0ec04-034e-4501-8836-c2f27ddd409c}</Project>
       <Name>SubwayTicketProblem.Library</Name>
     </ProjectReference>
   </ItemGroup>
