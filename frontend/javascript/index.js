@@ -3,11 +3,14 @@ var main = (function(){
     // 1: 从intergerArray挑选出偶数, 实现至少三种不同写法
     var intergerArray = [1,2,3,4,5,6,7,8,9,10]
     function filterOddNumber1(){
-
+        var resArr=[];
+        intergerArray.forEach(x=>{
+            if(x%2==0)
+             resArr.add(x);
+        });
     }
 
     function filterOddNumber2(){
-
     }
 
     function filterOddNumber3(){

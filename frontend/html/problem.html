@@ -5,7 +5,6 @@
     <title>Problem</title>
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="./index.min.css" rel="stylesheet">
-    <script src="./index.js"></script>
   </head>
   <body>
     <div class="container">
@@ -13,7 +12,7 @@
             <h3>1、使用原生的css实现bootstrap的按钮</h3>
             <br>
             <button class="btn btn-primary">Bootstrap的按钮</button>
-            <button>请把我变成跟左边的一样</button>
+            <button class="btnfirst">请把我变成跟左边的一样</button>
         </section>
         <section class="problem second">
             <h3>2、用css把以下几行元素并排显示, 且边框显示正常</h3>
@@ -27,7 +26,7 @@
         <section class="problem third">
             <h3>3、请把以下的文字与黑块居中显示</h3>
             <br>
-            <div>我想在中间!</div>
+            <div class="blockthird">我想在中间!</div>
             <div class="block">我也想!</div>
         </section>
         <section class="problem fourth">
@@ -51,12 +50,16 @@
             <button class="btn btn-primary">8</button>
             <button class="btn btn-primary">9</button>
             <button class="btn btn-primary">10</button>
+            <div id="result">
+                
+            </div>
+
         </section>
         <section class="problem sixth">
             <h3>6、点击按钮, 隐藏中间的内容块，但间距依然存在, 再次点击消除间距</h3>
             <br>
             <div>我不想消失</div>
-            <div>我想消失</div>
+            <div class="divhide">我想消失</div>
             <div>我不想消失</div>
             <button class="btn btn-primary">点我干掉第二个</button>
         </section>
@@ -77,4 +80,5 @@
         </section>
     </div>
   </body>
-</html>
+  <script src="./index.js"></script>
+  </html>

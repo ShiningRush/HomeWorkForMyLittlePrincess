@@ -22,20 +22,63 @@ section.problem {
   margin-top: 40px;
 }
 
+section.problem.first .btnfirst {
+  display: inline-block;
+  border: solid 1px transparent;
+  border-radius: .25rem;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+  font-weight: 400;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  user-select: none;
+}
+
+section.problem.first .btnfirst:hover {
+  background-color: blue;
+}
+
 section.problem.second ul {
   border: solid 1px black;
+  position: absolute;
+}
+
+section.problem.second ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+section.problem.third .blockthird {
+  text-align: center;
 }
 
 section.problem.third .block {
   width: 80px;
   background-color: black;
   color: white;
+  text-align: center;
+  margin: 0 auto;
 }
 
 section.problem.fourth .block {
   border: solid 1px black;
   width: 100%;
   height: 500px;
+  text-align: center;
+  line-height: 500px;
+}
+
+section.problem.fifth .result {
+  border: solid 1px black;
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  line-height: 500px;
 }
 
 section.problem.eighth .rectangle {
@@ -59,4 +102,16 @@ section.problem.eighth .circle {
   bottom: 0;
   right: 0;
   cursor: pointer;
+}
+
+section.problem.eighth .circle:hover {
+  width: 500px;
+  height: 300px;
+  transition: all 1s;
+  border-radius: 0;
+}
+
+section.problem.eighth .rectangle:hover {
+  transition: all 1s;
+  box-shadow: 0px 0px 20px 9px #c1b9b9;
 }
