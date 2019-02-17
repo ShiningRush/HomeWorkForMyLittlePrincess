@@ -1,0 +1,23 @@
+1，意大利面时代
+- css,js, html 全部写在一个文件当中
+- 代码难于维护
+
+2，DOM操作时代
+- css,js, html独立
+- 主要目的在于操作DOM
+- 核心技术为jQuery 以及相关的组件 
+- jQuery: 
+  1，解决了DOM选择(使用选择器)以及DOM操作(事件绑定， 属性修改)的问题; 
+  2，解决浏览器兼容问题; 
+  3， Ajax(主要针对IE6及以下: AcitveObejct, 于非IE浏览器: XMLHttpRequest)
+- 模块化
+- npm: 前端的包管理工具
+
+3，大前端时代
+- MVVM与MVC框架层出不穷， 逐渐舍弃DOM操作，意味着jQuery慢慢被淘汰
+- 由于Nodejs发展迅速，促进了模块化有好几种标准诞生(AMD, CMD, UMD, etc..)
+- 前端构建(webpack,)：
+  1, 压缩
+  2, 合并
+  3, 预处理(模块合并，代码预处理)
+- npm与nodejs合并作为官方管理工具

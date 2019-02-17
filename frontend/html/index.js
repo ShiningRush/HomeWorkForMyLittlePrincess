@@ -1,14 +1,11 @@
 var main = (function(){
-    console.info(document.querySelectorAll(".problem.fifth")[0])
-    var childs=document.getElementsByClassName("problem fifth")[0].childNodes;
+    console.info(document.querySelectorAll(".problem.fifth button"))
+    var childs=document.querySelectorAll(".problem.fifth button");
    
     childs.forEach(x => {
-       if( x.nodeName=="BUTTON")
-       {
-           x.onclick=function(){
-              document.getElementById("result").innerHTML = x.innerHTML;
-           };
-       }
+        x.onclick=function(){
+            document.getElementById("result").innerHTML = x.innerHTML;
+        };
     });
 
     var clickcount=0;

@@ -40,7 +40,7 @@ section.problem{
             line-height: 1.5;            
             cursor: pointer;
             user-select: none;
-            // transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
         }       
         .btnfirst:hover
@@ -79,11 +79,22 @@ section.problem{
 
     &.fourth{
         .block{
+            position: relative;
             border: solid 1px black;
             width: 100%;
             height: 500px;
-            text-align: center;
-            line-height:500px;
+        }
+
+        .content{
+            position: absolute;
+            width: 300px;
+            height: 30px;
+            background-color: black;
+            margin: auto;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
         }
     }
 
@@ -139,6 +150,23 @@ section.problem{
         .rectangle:hover{
             transition:all 1s;
             box-shadow:  0px 0px 20px 9px #c1b9b9;
+        }
+    }
+
+    &.demo{
+        div.parentDiv{
+            position: static;
+            width: 500px;
+            height: 30px;
+            background-color: red;
+
+        }
+        div.child{
+            position: absolute;
+            width: 500px;
+            height: 30px;
+            background-color: yellow;
+            top: 30px;
         }
     }
 }
