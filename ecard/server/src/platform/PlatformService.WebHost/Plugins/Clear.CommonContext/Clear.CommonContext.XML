@@ -1,0 +1,881 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Clear.CommonContext</name>
+    </assembly>
+    <members>
+        <member name="T:Clear.CommonContext.AppService.ClientPackAppService">
+            <summary>
+            客户端包相关应用服务接口
+            </summary>
+        </member>
+        <member name="F:Clear.CommonContext.AppService.ClientPackAppService._clientFilePath">
+            <summary>
+            客户端相关文件目录
+            </summary>
+        </member>
+        <member name="F:Clear.CommonContext.AppService.ClientPackAppService._updateFilePath">
+            <summary>
+            客户端升级配置文件
+            </summary>
+        </member>
+        <member name="F:Clear.CommonContext.AppService.ClientPackAppService._appIcoFilePath">
+            <summary>
+            客户端图标文件
+            </summary>
+        </member>
+        <member name="F:Clear.CommonContext.AppService.ClientPackAppService._appSetupFilePath">
+            <summary>
+            客户端主程序安装文件
+            </summary>
+        </member>
+        <member name="F:Clear.CommonContext.AppService.ClientPackAppService._rarFilePath">
+            <summary>
+            压缩程序exe路径
+            </summary>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.ClientPackAppService.GetClientPackFile(System.String)">
+            <summary>
+            根据Web前端传回来的IP生成客户端安装包
+            </summary>
+            <param name="clientIp">用户访问的ip地址域名</param>
+            <returns>安装包下载相对路径</returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.ClientPackAppService.GetLatestVersion">
+            <summary>
+            返回服务器端客户端最新版本号
+            </summary>
+            <returns>版本号</returns>
+        </member>
+        <member name="T:Clear.CommonContext.AppService.DataItemAppService">
+            <summary>
+            字典管理服务接口
+            </summary>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.DataItemAppService.AddDataItem(Clear.CommonContext.AppService.Dtos.DataItemDto)">
+            <summary>
+            添加字典分类信息
+            </summary>
+            <param name="item">添加实体</param>
+            <returns>返回新增记录的主键Id</returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.DataItemAppService.UpdateDataItem(Clear.CommonContext.AppService.Dtos.UpdateDataItemInput)">
+            <summary>
+            更新字典分类信息
+            </summary>
+            <param name="item">更新实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.DataItemAppService.DeleteDataItem(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除字典分类信息
+            </summary>
+            <param name="itemIds">删除id列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.DataItemAppService.GetDataItem(Clear.CommonContext.AppService.Dtos.GetDataItemInput)">
+            <summary>
+            获取字典分类信息
+            </summary>
+            <param name="getDataItem">查询实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.DataItemAppService.AddDataItemDetail(Clear.CommonContext.AppService.Dtos.DataItemDetailDto)">
+            <summary>
+            添加字典明细信息
+            </summary>
+            <param name="itemDetail">添加实体</param>
+            <returns>返回新增记录的主键Id</returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.DataItemAppService.UpdateDataItemDetail(Clear.CommonContext.AppService.Dtos.UpdateDataItemDetailInput)">
+            <summary>
+            更新字典信息
+            </summary>
+            <param name="itemDetail">更新实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.DataItemAppService.DeleteDataItemDetail(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除字典信息
+            </summary>
+            <param name="itemDetailIds">删除id列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.DataItemAppService.GetDataItemDetail(Clear.CommonContext.AppService.Dtos.GetDataItemDetailInput)">
+            <summary>
+            获取字典信息
+            </summary>
+            <param name="getDataItemDetail">查询实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.DataItemAppService.GetDetailByCode(System.String)">
+            <summary>
+            根据类别代码查询字典信息
+            </summary>
+            <param name="itemCode">类别代码</param>
+            <returns>返回的字段列表</returns>
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDetailDto.ItemId">
+            <summary>
+            分类主键
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDetailDto.ItemCode">
+            <summary>
+            编码
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDetailDto.ItemValue">
+            <summary>
+            值
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDetailDto.IsDefault">
+            <summary>
+            是否默认
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDetailDto.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDetailDto.IsEnabled">
+            <summary>
+            是否有效
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDetailDto.Description">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDetailDto.AllowEdit">
+            <summary>
+            允许编辑
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDetailDto.AllowDelete">
+            <summary>
+            允许删除
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDto.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDto.ItemCode">
+            <summary>
+            分类编码
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDto.ItemName">
+            <summary>
+            分类名称
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDto.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDto.Description">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDto.AllowEdit">
+            <summary>
+            允许编辑
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.DataItemDto.AllowDelete">
+            <summary>
+            允许删除
+            </summary> 
+        </member>
+        <member name="T:Clear.CommonContext.AppService.Dtos.GetDataItemInput">
+            <summary>
+            获取分类信息数据实体
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemInput.Id">
+            <summary>
+            主键
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemInput.ItemName">
+            <summary>
+            分类名称
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemInput.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="T:Clear.CommonContext.AppService.Dtos.GetDataItemDetailInput">
+            <summary>
+            获取字典信息数据实体
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemDetailInput.Id">
+            <summary>
+            主键
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemDetailInput.ItemId">
+            <summary>
+            分类主键
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemDetailInput.Keyword">
+            <summary>
+            关键字
+            </summary> 
+        </member>
+        <member name="T:Clear.CommonContext.AppService.Dtos.GetDetailOutputDTO">
+            <summary>
+            公用数据字典表DTO
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDetailOutputDTO.Code">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDetailOutputDTO.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDetailOutputDTO.IsDefault">
+            <summary>
+            是否默认
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDetailOutputDTO.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDetailOutputDTO.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.UpdateDataItemDetailInput.Id">
+            <summary>
+            明细主键
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemOutput.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemOutput.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemOutput.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemOutput.LastModifier">
+            <summary>
+            最后修改人
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemOutput.LastModifyTime">
+            <summary>
+            最后修改时间
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemDetailOutput.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemDetailOutput.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemDetailOutput.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemDetailOutput.LastModifier">
+            <summary>
+            最后修改人
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.GetDataItemDetailOutput.LastModifyTime">
+            <summary>
+            最后修改时间
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.OprLog.GetOprLogsInput.OperationType">
+            <summary>
+            操作类型
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.OprLog.GetOprLogsInput.Module">
+            <summary>
+            模块
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.OprLog.GetOprLogsOutput.Module">
+            <summary>
+            模块
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.OprLog.GetOprLogsOutput.Context">
+            <summary>
+            操作描述
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.OprLog.GetOprLogsOutput.OperationType">
+            <summary>
+            操作类型
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.OprLog.GetOprLogsOutput.ClientName">
+            <summary>
+            访问客户端名
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.OprLog.GetOprLogsOutput.ClientIpAddress">
+            <summary>
+            访问来源Ip
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.OprLog.GetOprLogsOutput.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.OprLog.GetOprLogsOutput.CreatorName">
+            <summary>
+            创建人姓名
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.AppService.Dtos.OprLog.GetOprLogsOutput.CreateTime">
+            <summary>
+            操作时间
+            </summary>
+        </member>
+        <member name="T:Clear.CommonContext.AppService.IClientPackAppService">
+            <summary>
+            客户端包相关应用服务接口
+            </summary>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.IClientPackAppService.GetClientPackFile(System.String)">
+            <summary>
+            根据Web前端传回来的IP生成客户端安装包
+            </summary>
+            <param name="clientIp">用户访问的ip地址域名</param>
+            <returns>安装包下载相对路径</returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.IClientPackAppService.GetLatestVersion">
+            <summary>
+            返回服务器端客户端最新版本号
+            </summary>
+            <returns>版本号</returns>
+        </member>
+        <member name="T:Clear.CommonContext.AppService.IDataItemAppService">
+            <summary>
+            字典管理服务接口
+            </summary>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.IDataItemAppService.AddDataItem(Clear.CommonContext.AppService.Dtos.DataItemDto)">
+            <summary>
+            添加字典分类信息
+            </summary>
+            <param name="item">添加实体</param>
+            <returns>返回新增记录的主键Id</returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.IDataItemAppService.UpdateDataItem(Clear.CommonContext.AppService.Dtos.UpdateDataItemInput)">
+            <summary>
+            更新字典分类信息
+            </summary>
+            <param name="item">更新实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.IDataItemAppService.DeleteDataItem(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除字典分类信息
+            </summary>
+            <param name="itemIds">删除id列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.IDataItemAppService.GetDataItem(Clear.CommonContext.AppService.Dtos.GetDataItemInput)">
+            <summary>
+            获取字典分类信息
+            </summary>
+            <param name="getDataItem">查询实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.IDataItemAppService.AddDataItemDetail(Clear.CommonContext.AppService.Dtos.DataItemDetailDto)">
+            <summary>
+            添加字典明细信息
+            </summary>
+            <param name="itemDetail">添加实体</param>
+            <returns>返回新增记录的主键Id</returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.IDataItemAppService.UpdateDataItemDetail(Clear.CommonContext.AppService.Dtos.UpdateDataItemDetailInput)">
+            <summary>
+            更新字典信息
+            </summary>
+            <param name="itemDetail">更新实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.IDataItemAppService.DeleteDataItemDetail(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除字典信息
+            </summary>
+            <param name="itemDetailIds">删除id列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.IDataItemAppService.GetDataItemDetail(Clear.CommonContext.AppService.Dtos.GetDataItemDetailInput)">
+            <summary>
+            获取字典信息
+            </summary>
+            <param name="getDataItemDetail">查询实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.IDataItemAppService.GetDetailByCode(System.String)">
+            <summary>
+            根据类别代码查询字典信息
+            </summary>
+            <param name="itemCode">类别代码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Clear.CommonContext.AppService.IOprLogAppService">
+            <summary>
+            操作日志服务
+            </summary>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.IOprLogAppService.GetOprLogs(Clear.CommonContext.AppService.Dtos.OprLog.GetOprLogsInput)">
+            <summary>
+            获取操作日志列表
+            </summary>
+            <param name="inputDto">入参</param>
+            <returns></returns>
+        </member>
+        <member name="T:Clear.CommonContext.AppService.OprLogAppService">
+            <summary>
+            操作日志服务
+            </summary>
+        </member>
+        <member name="M:Clear.CommonContext.AppService.OprLogAppService.GetOprLogs(Clear.CommonContext.AppService.Dtos.OprLog.GetOprLogsInput)">
+            <summary>
+            获取操作日志列表
+            </summary>
+            <param name="inputDto">入参</param>
+            <returns></returns>
+        </member>
+        <member name="T:Clear.CommonContext.Domain.DataItemAggregate.DataItem">
+            <summary>
+            数据字典分类表
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItem.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItem.ItemCode">
+            <summary>
+            分类编码
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItem.ItemName">
+            <summary>
+            分类名称
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItem.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItem.Description">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItem.AllowEdit">
+            <summary>
+            允许编辑
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItem.AllowDelete">
+            <summary>
+            允许删除
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItem.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItem.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItem.LastModifier">
+            <summary>
+            最后修改人
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItem.LastModifyTime">
+            <summary>
+            最后修改时间
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItem.DataItemDetails">
+            <summary>
+            分类字典信息
+            </summary>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.DataItemAggregate.DataItem.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="T:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail">
+            <summary>
+            数据字典明细表、存储系统参数和系统中用的键值对数据
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.ItemId">
+            <summary>
+            分类主键
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.ItemCode">
+            <summary>
+            编码
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.ItemValue">
+            <summary>
+            值
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.SimpleSpelling">
+            <summary>
+            简拼
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.IsDefault">
+            <summary>
+            是否默认
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.AllowEdit">
+            <summary>
+            允许编辑
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.AllowDelete">
+            <summary>
+            允许删除
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.IsDelete">
+            <summary>
+            是否删除
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.IsEnabled">
+            <summary>
+            是否有效
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.Description">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.CreateTime">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.LastModifier">
+            <summary>
+            最后修改人
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataitemDetail.LastModifyTime">
+            <summary>
+            最后修改时间
+            </summary> 
+        </member>
+        <member name="M:Clear.CommonContext.Domain.DataItemAggregate.DataItemTransformInterceptor.PreIntercept(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            接口方法执行之前 检测数据字典存储key是否合法
+            </summary>
+            <param name="invocation"></param>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.DataItemAggregate.DataItemTransformInterceptor.PostIntercept(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            接口方法执行之后  将字典存储key转换成显示value
+            </summary>
+            <param name="invocation"></param>
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItemDto.Category">
+            <summary>
+            类别
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItemDto.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.Domain.DataItemAggregate.DataItemDto.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.IOperationLogHelper.ShouldRecordOperationLog(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            是否需要记录操作日志
+            </summary>
+            <param name="invocation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.IOperationLogHelper.CreateOperationlog(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            创建操作日志对象
+            </summary>
+            <param name="invocation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.IOperationLogHelper.CreateOperationlog(Castle.DynamicProxy.IInvocation,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            创建操作日志对象
+            </summary>
+            <param name="invocation"></param>
+            <param name="arguments"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.IOperationLogHelper.SaveAsync(Clear.CommonContext.Domain.OperationLogAggregate.Operationlog)">
+            <summary>
+            保存操作日志对象
+            </summary>
+            <param name="operationlog"></param>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.IOperationLogHelper.SaveAsync(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            保存操作日志对象
+            </summary>
+            <param name="invocation"></param>
+        </member>
+        <member name="T:Clear.CommonContext.Domain.OperationLogAggregate.ObjectFormat">
+            <summary>
+            对象格式化成字符串
+            </summary>
+        </member>
+        <member name="T:Clear.CommonContext.Domain.OperationLogAggregate.OpeartionlogConfig">
+            <summary>
+            操作日志配置表
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.OperationLogAggregate.OpeartionlogConfig.MethodName">
+            <summary>
+            方法名称(包含命名空间)
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.OperationLogAggregate.OpeartionlogConfig.Module">
+            <summary>
+            模块
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.OperationLogAggregate.OpeartionlogConfig.OperationType">
+            <summary>
+            操作类型
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.OperationLogAggregate.OpeartionlogConfig.LogFormat">
+            <summary>
+            日志格式化
+            </summary> 
+        </member>
+        <member name="T:Clear.CommonContext.Domain.OperationLogAggregate.Operationlog">
+            <summary>
+            操作日志表
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.OperationLogAggregate.Operationlog.Module">
+            <summary>
+            模块
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.OperationLogAggregate.Operationlog.OperationType">
+            <summary>
+            操作类型
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.OperationLogAggregate.Operationlog.LogContext">
+            <summary>
+            日志内容
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.OperationLogAggregate.Operationlog.ClientName">
+            <summary>
+            访问客户端名
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.OperationLogAggregate.Operationlog.ClientIpAddress">
+            <summary>
+            访问来源Ip
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.OperationLogAggregate.Operationlog.BrowserInfo">
+            <summary>
+            访问浏览器信息
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.Domain.OperationLogAggregate.Operationlog.Parameters">
+            <summary>
+            参数内容
+            </summary> 
+        </member>
+        <member name="P:Clear.CommonContext.Domain.OperationLogAggregate.Operationlog.OperationUserId">
+            <summary>
+            操作人ID
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.Domain.OperationLogAggregate.Operationlog.CreateTime">
+            <summary>
+            操作时间
+            </summary>
+        </member>
+        <member name="T:Clear.CommonContext.Domain.OperationLogAggregate.OperationLogHelper">
+            <summary>
+            操作日志帮助类
+            </summary>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.OperationLogHelper.CreateOperationlog(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            创建操作日志对象
+            </summary>
+            <param name="invocation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.OperationLogHelper.CreateOperationlog(Castle.DynamicProxy.IInvocation,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            创建操作日志对象
+            </summary>
+            <param name="invocation"></param>
+            <param name="arguments"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.OperationLogHelper.SaveAsync(Clear.CommonContext.Domain.OperationLogAggregate.Operationlog)">
+            <summary>
+            保存操作日志对象
+            </summary>
+            <param name="operationlog"></param>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.OperationLogHelper.SaveAsync(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            保存操作日志对象
+            </summary>
+            <param name="invocation"></param>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.OperationLogHelper.ShouldRecordOperationLog(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            是否需要记录操作日志
+            </summary>
+            <param name="invocation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.OperationLogHelper.GetOperationUserId(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            获取操作人ID
+            </summary>
+            <param name="arguments"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.OperationLogHelper.ConvertArgumentsToJson(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            将参数转换成json
+            </summary>
+            <param name="arguments"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.OperationLogHelper.GetOpeartionlogConfig(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            读取操作日志配置
+            </summary>
+            <param name="invocation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.OperationLogHelper.CreateArgumentsDictionary(System.Reflection.MethodInfo,System.Object[])">
+            <summary>
+            创建参数字典
+            </summary>
+            <param name="method"></param>
+            <param name="arguments"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Clear.CommonContext.Domain.OperationLogAggregate.OperationLogInterceptor">
+            <summary>
+            操作日志拦截器
+            </summary>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.OperationLogInterceptor.PreInjectionArguments(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Proceed执行之前注入参数
+            </summary>
+            <param name="arguments"></param>
+        </member>
+        <member name="M:Clear.CommonContext.Domain.OperationLogAggregate.OperationLogInterceptor.PostInjectionArguments(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Proceed执行之后注入参数
+            </summary>
+            <param name="arguments"></param>
+        </member>
+        <member name="P:Clear.CommonContext.Domain.SequenceModle.SequenceModle.Parameter">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:Clear.CommonContext.Domain.SequenceModle.SequenceModle.SerialNumber">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="M:Clear.CommonContext.Infrastructure.Extensions.StringSubstitutionExtension.Subtitute(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Replaces the format item in a specified string with the string representation of a corresponding object in a specified dictionary.
+            </summary>
+        </member>
+        <member name="M:Clear.CommonContext.Infrastructure.Extensions.StringSubstitutionExtension.Subtitute(System.String,System.IFormatProvider,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Replaces the format item in a specified string with the string representation of a corresponding object in a specified dictionary.
+            A specified parameter supplies culture-specific formatting information.
+            </summary>
+        </member>
+    </members>
+</doc>

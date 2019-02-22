@@ -1,0 +1,624 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Clear.Settlement</name>
+    </assembly>
+    <members>
+        <member name="M:Clear.AccountManage.Application.BillingRecordAppService.GetBillingRecordList(Clear.AccountManage.Application.InputBillingRecordListDto)">
+            <summary>
+            获取用卡明细列表（分页）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.AccountManage.Application.BillingRecordAppService.DeriveBillingRecordList(Clear.AccountManage.Application.InputBillingRecordListDto)">
+            <summary>
+            导出用卡明细列表数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.AccountManage.Application.BillingRecordAppService.HandleSQL(Clear.AccountManage.Application.InputBillingRecordListDto,System.String,System.String@)">
+            <summary>
+            sql处理
+            </summary>
+            <param name="input"></param>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Clear.AccountManage.Application.InputBillingRecordListDto.CardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.InputBillingRecordListDto.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.InputBillingRecordListDto.Creator">
+            <summary>
+            操作员
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.InputBillingRecordListDto.BeginTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.InputBillingRecordListDto.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.InputBillingRecordListDto.ApplicationScene">
+            <summary>
+            应用场景
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.InputBillingRecordListDto.AccountId">
+            <summary>
+            账户ID
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.InputBillingRecordListDto.CapitalType">
+            <summary>
+            资金类型
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.InputDeriveBillingRecordListDto.Creator">
+            <summary>
+            操作员
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.InputDeriveBillingRecordListDto.BeginTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.InputDeriveBillingRecordListDto.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.InputDeriveBillingRecordListDto.ApplicationScene">
+            <summary>
+            应用场景
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.InputDeriveBillingRecordListDto.BusinessType">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputBillingRecordListDto.AccountId">
+            <summary>
+            人信息
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputBillingRecordListDto.Name">
+            <summary>
+            人信息
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputBillingRecordListDto.Amount">
+            <summary>
+            资金
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputBillingRecordListDto.Balance">
+            <summary>
+            余额
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputBillingRecordListDto.CreateTime">
+            <summary>
+            创建时间（交易时间）
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputBillingRecordListDto.ApplicationScene">
+            <summary>
+            应用场景
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputBillingRecordListDto.UserName">
+            <summary>
+            操作员
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputBillingRecordListDto.CapitalType">
+            <summary>
+            资金类型
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputBillingRecordListDto.BillingType">
+            <summary>
+            资金类型
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputDeriveBillingRecordListDto.Name">
+            <summary>
+            人信息
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputDeriveBillingRecordListDto.Amount">
+            <summary>
+            资金
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputDeriveBillingRecordListDto.Balance">
+            <summary>
+            余额
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputDeriveBillingRecordListDto.CreateTime">
+            <summary>
+            创建时间（交易时间）
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputDeriveBillingRecordListDto.ApplicationScene">
+            <summary>
+            应用场景
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputDeriveBillingRecordListDto.UserName">
+            <summary>
+            操作员
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputDeriveBillingRecordListDto.CapitalType">
+            <summary>
+            资金类型
+            </summary>
+        </member>
+        <member name="P:Clear.AccountManage.Application.OutputDeriveBillingRecordListDto.BillingType">
+            <summary>
+            资金类型
+            </summary>
+        </member>
+        <member name="M:Clear.AccountManage.Application.IBillingRecordAppService.GetBillingRecordList(Clear.AccountManage.Application.InputBillingRecordListDto)">
+            <summary>
+            获取用卡明细列表（分页）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.AccountManage.Application.IBillingRecordAppService.DeriveBillingRecordList(Clear.AccountManage.Application.InputBillingRecordListDto)">
+            <summary>
+            导出用卡明细
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetNotSettledBillingGraphDataInput.SettleTime">
+            <summary>
+            结算时间
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetNotSettledBillingGraphDataOutput.ItemKey">
+            <summary>
+            费用清单项目Key
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetNotSettledBillingGraphDataOutput.ItemValue">
+            <summary>
+            费用清单项目值
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSettlementListInput.OperatorName">
+            <summary>
+            操作员名称
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSettlementListInput.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSettlementListInput.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSettlementListOutput.SettlementRecordId">
+            <summary>
+            结算记录Id
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSettlementListOutput.OperatorName">
+            <summary>
+            操作员姓名
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSettlementListOutput.SettlementTime">
+            <summary>
+            结算时间
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSettlementListOutput.SettlementContent">
+            <summary>
+            结算内容(Json格式, 需要转化)
+            </summary>
+        </member>
+        <member name="T:Clear.Settlement.AppServices.Dtos.ExportSingleSettlementDetailInput">
+            <summary>
+            获取单次结算记录详细Input
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.ExportSingleSettlementDetailInput.SettlementId">
+            <summary>
+            结算记录Id
+            </summary>
+        </member>
+        <member name="T:Clear.Settlement.AppServices.Dtos.GetSingleSettlementDetailInput">
+            <summary>
+            获取单次结算记录详细Input
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSingleSettlementDetailInput.SettlementId">
+            <summary>
+            结算记录Id
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSingleSettlementDetailOutput.BillingNo">
+            <summary>
+            交易流水号
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSingleSettlementDetailOutput.OperatorName">
+            <summary>
+            操作员姓名
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSingleSettlementDetailOutput.CustomerName">
+            <summary>
+            使用者姓名
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSingleSettlementDetailOutput.BillingType">
+            <summary>
+            交易类型
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSingleSettlementDetailOutput.PayType">
+            <summary>
+            支付方式
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSingleSettlementDetailOutput.Amount">
+            <summary>
+            金额
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.GetSingleSettlementDetailOutput.CreateTime">
+            <summary>
+            交易时间
+            </summary>
+        </member>
+        <member name="T:Clear.Settlement.AppServices.Dtos.SettleBillingRecordInput">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.AppServices.Dtos.SettleBillingRecordInput.SettleTime">
+            <summary>
+            结算时间
+            </summary>
+        </member>
+        <member name="T:Clear.Settlement.AppServices.ISettlementAppService">
+            <summary>
+            结算相关应用服务
+            </summary>
+        </member>
+        <member name="M:Clear.Settlement.AppServices.ISettlementAppService.SettleBillingRecord(Clear.Settlement.AppServices.Dtos.SettleBillingRecordInput)">
+            <summary>
+            按时间段结算交易记录
+            </summary>
+            <param name="inputDto"></param>
+        </member>
+        <member name="M:Clear.Settlement.AppServices.ISettlementAppService.GetSettlementList(Clear.Settlement.AppServices.Dtos.GetSettlementListInput)">
+            <summary>
+            获取结算明细
+            </summary>
+        </member>
+        <member name="M:Clear.Settlement.AppServices.ISettlementAppService.GetSingleSettlementDetail(Clear.Settlement.AppServices.Dtos.GetSingleSettlementDetailInput)">
+            <summary>
+            获取单次结算的交易记录
+            </summary>
+        </member>
+        <member name="M:Clear.Settlement.AppServices.ISettlementAppService.ExportSingleSettlementDetail(Clear.Settlement.AppServices.Dtos.ExportSingleSettlementDetailInput)">
+            <summary>
+            导出单次结算的交易记录
+            </summary>
+        </member>
+        <member name="M:Clear.Settlement.AppServices.ISettlementAppService.GetNotSettledBillingGraphData(Clear.Settlement.AppServices.Dtos.GetNotSettledBillingGraphDataInput)">
+            <summary>
+            获取当前未结算的交易记录图表集
+            </summary>
+            <param name="inputDto"></param>
+        </member>
+        <member name="T:Clear.Settlement.AppServices.SettlementAppService">
+            <summary>
+            结算相关服务
+            </summary>
+        </member>
+        <member name="M:Clear.Settlement.AppServices.SettlementAppService.SettleBillingRecord(Clear.Settlement.AppServices.Dtos.SettleBillingRecordInput)">
+            <summary>
+            按时间段结算交易记录
+            </summary>
+            <param name="inputDto"></param>
+        </member>
+        <member name="M:Clear.Settlement.AppServices.SettlementAppService.GetSettlementList(Clear.Settlement.AppServices.Dtos.GetSettlementListInput)">
+            <summary>
+            获取结算明细
+            </summary>
+        </member>
+        <member name="M:Clear.Settlement.AppServices.SettlementAppService.GetSingleSettlementDetail(Clear.Settlement.AppServices.Dtos.GetSingleSettlementDetailInput)">
+            <summary>
+            获取单次结算的交易记录
+            </summary>
+        </member>
+        <member name="M:Clear.Settlement.AppServices.SettlementAppService.ExportSingleSettlementDetail(Clear.Settlement.AppServices.Dtos.ExportSingleSettlementDetailInput)">
+            <summary>
+            导出单次结算的交易记录
+            </summary>
+        </member>
+        <member name="M:Clear.Settlement.AppServices.SettlementAppService.GetNotSettledBillingGraphData(Clear.Settlement.AppServices.Dtos.GetNotSettledBillingGraphDataInput)">
+            <summary>
+            获取当前未结算的交易记录图表集
+            </summary>
+            <param name="inputDto"></param>
+        </member>
+        <member name="T:Clear.Settlement.Domain.OperatorAggregate.Account">
+            <summary>
+            账户信息
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.Account.Id">
+            <summary>
+            账号代码 自动按照1XXXXXXXXXX格式生成11位数字
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.Account.Name">
+            <summary>
+            用户名称
+            </summary> 
+        </member>
+        <!-- 对于成员“T:Clear.Settlement.Domain.OperatorAggregate.BillingRecord”忽略有格式错误的 XML 注释 -->
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.BillingNo">
+            <summary>
+            交易流水号
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.AccountId">
+            <summary>
+            账号代码
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.CapitalType">
+            <summary>
+            资金类型 对应数据字典表 CapitalType 
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.AppId">
+            <summary>
+            应用ID
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.BillingType">
+            <summary>
+            流水类型 对应字典代码 BillingType
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.PayType">
+            <summary>
+            支付方式 对应字典代码 PayType
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.CardNo">
+            <summary>
+            卡号
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.OrganizeId">
+            <summary>
+            机构主键
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.Amount">
+            <summary>
+            金额
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.Balance">
+            <summary>
+            余额 变更后的余额
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.Desc">
+            <summary>
+            描述
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.AccessBillingNo">
+            <summary>
+            访问系统流水号
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.SettlementRecordId">
+            <summary>
+            结算记录Id
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.CreateTime">
+            <summary>
+            交易时间
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.TerminalType">
+            <summary>
+            终端类型
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.TerminalNo">
+            <summary>
+            终端编号
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.ApplicationScene">
+            <summary>
+            应用场景
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.BusinessType">
+            <summary>
+            业务类型
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.OwedAccount">
+            <summary>
+            所属帐户
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.BillingRecord.OwedOperator">
+            <summary>
+            所属操作人
+            </summary>
+        </member>
+        <member name="T:Clear.Settlement.Domain.OperatorAggregate.Operator">
+            <summary>
+            操作员
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.Operator.LoginName">
+            <summary>
+            登陆名
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.Operator.UserName">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="T:Clear.Settlement.Domain.OperatorAggregate.SettlementRecord">
+            <summary>
+            结算信息
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.SettlementRecord.OrganizeId">
+            <summary>
+            所属机构Id
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.SettlementRecord.AmountContent">
+            <summary>
+            金额内容Json
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.SettlementRecord.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.SettlementRecord.SettleEndTime">
+            <summary>
+            结算结束时间
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.SettlementRecord.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.Domain.OperatorAggregate.SettlementRecord.OwedOperator">
+            <summary>
+            所属操作人
+            </summary>
+        </member>
+        <member name="M:Clear.Settlement.Domain.Services.SettlementService.PrivewSettlement(Clear.Settlement.Domain.OperatorAggregate.Operator,System.DateTime)">
+            <summary>
+            预览结算信息, 返回结果为键值对方便以后定制化
+            </summary>
+            <param name="ownedOperator"></param>
+            <param name="settleTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.Settlement.Domain.Services.SettlementService.MoneyToChinese(System.String)">
+            <summary>
+            金额转为大写金额
+            </summary>
+            <param name="LowerMoney"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Clear.Settlement.EventHandler.GetDataItemRequest">
+            <summary>
+            请求数据字典
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.EventHandler.DataItemDto.Category">
+            <summary>
+            类别
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.EventHandler.DataItemDto.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.EventHandler.DataItemDto.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="T:Clear.Settlement.EventHandler.OnCapitalBalanceChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.EventHandler.OnCapitalBalanceChanged.AccountId">
+            <summary>
+            账号代码
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.EventHandler.OnCapitalBalanceChanged.CapitalType">
+            <summary>
+            资金类型 对应数据字典表 CapitalType 
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.EventHandler.OnCapitalBalanceChanged.Balance">
+            <summary>
+            金额
+            </summary> 
+        </member>
+        <member name="P:Clear.Settlement.EventHandler.OnCapitalBalanceChanged.ChangedAmount">
+            <summary>
+            变更金额
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.EventHandler.OnCapitalBalanceChanged.PayType">
+            <summary>
+            支付方式
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.EventHandler.OnCapitalBalanceChanged.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.EventHandler.OnCapitalBalanceChanged.BillingType">
+            <summary>
+            消费类型
+            </summary>
+        </member>
+        <member name="P:Clear.Settlement.EventHandler.OnCapitalBalanceChanged.CardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+    </members>
+</doc>

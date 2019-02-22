@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<UpdateConfig>
+  <!--升级包下载地址-->
+  <UpdateUrl>{homeurl}/ClientFile/setup.exe</UpdateUrl>
+  <!--当前升级包版本-->
+  <PackVersion>1.0.0.0</PackVersion>
+  <!--升级包描述-->
+  <PackDesc>修改bug</PackDesc>
+  <!--是否强制升级-->
+  <EnForceMode>false</EnForceMode>
+  <!--是否静默升级-->
+  <SilentMode>false</SilentMode>
+</UpdateConfig>

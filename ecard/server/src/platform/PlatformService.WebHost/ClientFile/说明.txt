@@ -1,0 +1,6 @@
+目录说明
+1、目录Plugin为客户端所加载插件目录
+2、Plugin.xml为客户端插件下载和描述配置文件
+3、setup.exe、Rar.exe和Default.SFX生成客户端安装包时所使用文件，不能删除
+4、update.xml为客户端主程序升级配置文件
+5、dotNetFx40_Full_x86_x64.exe 客户端主程序运行需要的Microsoft .NET Framework 4.0

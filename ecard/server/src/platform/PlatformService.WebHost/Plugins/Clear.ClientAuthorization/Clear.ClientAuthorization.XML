@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Clear.ClientAuthorization</name>
+    </assembly>
+    <members>
+        <member name="M:Clear.ClientAuthorization.AppService.ClientAuthorization.GetAllApp">
+            <summary>
+            获取所有的授权信息
+            </summary>
+            <returns>所有接入应用</returns>
+        </member>
+        <member name="P:Clear.ClientAuthorization.AppService.AuthorizationOutputDTO.Id">
+            <summary>
+            记录Id
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.AppService.AuthorizationOutputDTO.AppID">
+            <summary>
+            接入应用Id
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.AppService.AuthorizationOutputDTO.AppName">
+            <summary>
+            应用名
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.AppService.AuthorizationOutputDTO.ExpireTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.AppService.AuthorizationOutputDTO.IsStop">
+            <summary>
+            是否停用
+            </summary>
+        </member>
+        <member name="T:Clear.ClientAuthorization.AppService.IAuthorizationAppService">
+            <summary>
+            授权信息服务接口
+            </summary>
+        </member>
+        <member name="M:Clear.ClientAuthorization.AppService.IAuthorizationAppService.GetAllApp">
+            <summary>
+            获取所有的授权信息
+            </summary>
+            <returns>所有接入应用</returns>
+        </member>
+        <member name="F:Clear.ClientAuthorization.Consts.ClientAuthorizationConsts.PUBLIC_KEY_EXPIRE_TIME">
+            <summary>
+            公钥过期时间(分钟)
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationCache.AppID">
+            <summary>
+            终端应用ID
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationCache.AppName">
+            <summary>
+            终端应用名
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationCache.AppSecretHash">
+            <summary>
+            应用授权密钥hash值
+            应用授权密钥的Hash值，加密信息关联机器硬件码信息
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationCache.AppSecretSalt">
+            <summary>
+            授权密钥加密随机值
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationCache.ApiAuthorizations">
+            <summary>
+            授权验证数据
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationCache.RestDays">
+            <summary>
+            剩余时间
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationCache.ExpireTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationCache.RSAKeys">
+            <summary>
+            RSA字典
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationCache.IsAuthorizationExpired">
+            <summary>
+            是否过期
+            </summary>
+        </member>
+        <member name="M:Clear.ClientAuthorization.Domain.AuthorizationCache.#ctor(Clear.ClientAuthorization.Domain.AuthorizationInfo,PlatformService.BridgeComponent.Service.IServiceContext)">
+            <summary>
+            初始化授权信息缓存
+            </summary>
+            <param name="initInfo"></param>
+            <param name="serviceContext"></param>
+        </member>
+        <member name="M:Clear.ClientAuthorization.Domain.AuthorizationCache.IsValid(System.String,Clear.ClientAuthorization.Infrastructure.Encryption.IEncryptor)">
+            <summary>
+            验证Secret是否有效
+            </summary>
+            <param name="decryptedSecret"></param>
+            <param name="encryptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.ClientAuthorization.Domain.AuthorizationCache.ValidateUrl(System.String)">
+            <summary>
+            验证Url
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.ClientAuthorization.Domain.AuthorizationCache.GetPublicKey(Clear.ClientAuthorization.Infrastructure.Encryption.IEncryptor)">
+            <summary>
+            获取公钥
+            </summary>
+            <param name="encryptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.ClientAuthorization.Domain.AuthorizationCache.RefreshRSAKey(Clear.ClientAuthorization.Infrastructure.Encryption.IEncryptor,Clear.ClientAuthorization.Domain.RSAKey)">
+            <summary>
+            刷新RSAKey过期时间
+            </summary>
+            <param name="encryptor"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationInfo.AppID">
+            <summary>
+            应用ID
+            AppID 授权应用唯一标识，由服务器运营人员授权后发布
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationInfo.AppName">
+            <summary>
+            应用名
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationInfo.AppSecretHash">
+            <summary>
+            应用授权密钥hash值
+            应用授权密钥的Hash值，加密信息关联机器硬件码信息
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationInfo.AppSecretSalt">
+            <summary>
+            授权密钥加密随机值
+            </summary>
+        </member>
+        <member name="P:Clear.ClientAuthorization.Domain.AuthorizationInfo.ValidateData">
+            <summary>
+            授权验证数据
+            包含线上系统分配的医院信息（K3系统的医院ID）、院内主备服务器的硬件信息和接口访问模块的授权信息，防止数据导出到其它医院可以使用
+            </summary>
+        </member>
+    </members>
+</doc>

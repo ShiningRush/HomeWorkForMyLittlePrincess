@@ -1,0 +1,2080 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Clear.UserPermission</name>
+    </assembly>
+    <members>
+        <member name="T:Clear.UserPermission.Application.DepartmentAppService">
+            <summary>
+            部门管理服务
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Application.DepartmentAppService.AddDepartment(Clear.UserPermission.Application.Dtos.DepartmentDTO)">
+            <summary>
+            添加记录
+            </summary>
+            <param name="entity">添加实体</param>
+            <returns>返回新增记录的主键Id</returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.DepartmentAppService.UpdateDepartment(Clear.UserPermission.Application.Dtos.UpdateDepartmentInputDTO)">
+            <summary>
+            更新记录
+            </summary>
+            <param name="entity">更新实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.DepartmentAppService.DeleteDepartment(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除记录
+            </summary>
+            <param name="ids">删除id列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.DepartmentAppService.GetDepartment(Clear.UserPermission.Application.Dtos.GetDepartmentInputDTO)">
+            <summary>
+            查询记录
+            </summary>
+            <param name="inputDto">查询实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.DepartmentAppService.GetDepartmentByOrganizeId(System.Guid)">
+            <summary>
+            查询记录
+            </summary>
+            <param name="organizeId">查询实体</param>
+            <returns></returns>
+        </member>
+        <member name="T:Clear.UserPermission.Application.Dtos.DepartmentDTO">
+            <summary>
+            部门信息基础DTO
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.DepartmentDTO.OrganizeId">
+            <summary>
+            机构主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.DepartmentDTO.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.DepartmentDTO.Name">
+            <summary>
+            部门名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.DepartmentDTO.ManagerId">
+            <summary>
+            负责人主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.DepartmentDTO.Phone">
+            <summary>
+            内线电话
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.DepartmentDTO.Email">
+            <summary>
+            电子邮件
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.DepartmentDTO.Fax">
+            <summary>
+            部门传真
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.DepartmentDTO.Layer">
+            <summary>
+            层
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.DepartmentDTO.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.DepartmentDTO.Description">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="T:Clear.UserPermission.Application.Dtos.GetDepartmentByOrgOutputDTO">
+            <summary>
+            通过机构id查询部门信息DTO
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentByOrgOutputDTO.Id">
+            <summary>
+            主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentByOrgOutputDTO.OrganizeId">
+            <summary>
+            机构主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentByOrgOutputDTO.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentByOrgOutputDTO.Name">
+            <summary>
+            部门名称
+            </summary> 
+        </member>
+        <member name="T:Clear.UserPermission.Application.Dtos.GetDepartmentInputDTO">
+            <summary>
+            获取部门信息DTO
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentInputDTO.OrganizeId">
+            <summary>
+            所属组织机构Id
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentInputDTO.ParentId">
+            <summary>
+            上级部门Id
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentInputDTO.DepartmentName">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentInputDTO.Manager">
+            <summary>
+            管理者名称
+            </summary>
+        </member>
+        <member name="T:Clear.UserPermission.Application.Dtos.GetDepartmentOutputDTO">
+            <summary>
+            查询部门信息输出DTO
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentOutputDTO.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentOutputDTO.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentOutputDTO.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentOutputDTO.LastModifier">
+            <summary>
+            最后修改人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentOutputDTO.LastModifyTime">
+            <summary>
+            最后修改时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentOutputDTO.ParentName">
+            <summary>
+            上级部门名称
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentOutputDTO.Manager">
+            <summary>
+            部门管理者
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetDepartmentOutputDTO.OrganizeName">
+            <summary>
+            机构名称
+            </summary> 
+        </member>
+        <member name="T:Clear.UserPermission.Application.Dtos.UpdateDepartmentInputDTO">
+            <summary>
+            更新部门信息DTO
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.UpdateDepartmentInputDTO.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.GetModuleAuthsInput.IsIncludeModule">
+            <summary>
+            是否包含模块
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.GetModuleAuthsOutput.Id">
+            <summary>
+            主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.GetModuleAuthsOutput.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.GetModuleAuthsOutput.Code">
+            <summary>
+            编码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.GetModuleAuthsOutput.Name">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.GetModuleAuthsOutput.WebAPI">
+            <summary>
+            API方法
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.InsertModuleAuthInput.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.InsertModuleAuthInput.Code">
+            <summary>
+            编码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.InsertModuleAuthInput.Name">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.InsertModuleAuthInput.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.InsertModuleAuthInput.Icon">
+            <summary>
+            图标
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.InsertModuleAuthInput.UrlAddress">
+            <summary>
+            导航地址
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.InsertModuleAuthInput.Target">
+            <summary>
+            导航目标
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.InsertModuleAuthInput.AllowAutoExpand">
+            <summary>
+            允许自动展开
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.InsertModuleAuthInput.Description">
+            <summary>
+            描述
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.InsertModuleAuthInput.IsEnabled">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.InsertModuleAuthInput.ModuleAuths">
+            <summary>
+            模块权限
+            </summary>
+        </member>
+        <member name="T:Clear.UserPermission.Application.Dtos.Modules.ModuleAuthChildDto">
+            <summary>
+            模块权限
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.ModuleAuthChildDto.Code">
+            <summary>
+            编码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.ModuleAuthChildDto.Name">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.ModuleAuthChildDto.WebAPI">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput.Id">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput.Code">
+            <summary>
+            编码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput.Name">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput.Icon">
+            <summary>
+            图标
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput.UrlAddress">
+            <summary>
+            导航地址
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput.Target">
+            <summary>
+            导航目标
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput.AllowAutoExpand">
+            <summary>
+            允许自动展开
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput.Description">
+            <summary>
+            描述
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput.IsEnabled">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput.ModuleAuths">
+            <summary>
+            模块权限
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeInputDTO.Name">
+            <summary>
+            机构名字
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeInputDTO.Code">
+            <summary>
+            机构代码
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeInputDTO.Manager">
+            <summary>
+            机构负责人
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.Code">
+            <summary>
+            机构代码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.Name">
+            <summary>
+            机构名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.Nature">
+            <summary>
+            机构性质
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.Phone">
+            <summary>
+            电话
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.Fax">
+            <summary>
+            传真
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.Postalcode">
+            <summary>
+            邮编
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.Email">
+            <summary>
+            电子邮箱
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.ManagerId">
+            <summary>
+            负责人主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.Address">
+            <summary>
+            详细地址
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.WebAddress">
+            <summary>
+            公司官网
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.FoundedTime">
+            <summary>
+            成立时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.Description">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.LastModifier">
+            <summary>
+            最后修改人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetOrganizeOutputDTO.LastModifyTime">
+            <summary>
+            最后修改时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetUserOrganizeOutputDTO.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.Code">
+            <summary>
+            机构代码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.Name">
+            <summary>
+            机构名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.Nature">
+            <summary>
+            机构性质
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.Phone">
+            <summary>
+            电话
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.Fax">
+            <summary>
+            传真
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.Postalcode">
+            <summary>
+            邮编
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.ManagerId">
+            <summary>
+            负责人主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.Address">
+            <summary>
+            详细地址
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.WebAddress">
+            <summary>
+            公司官网
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.FoundedTime">
+            <summary>
+            成立时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.OrganizeDTO.Description">
+            <summary>
+            备注信息
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetRoleInputDTO.Name">
+            <summary>
+            角色名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetRoleInputDTO.OrganizeId">
+            <summary>
+            所属机构ID
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetRoleInputDTO.OrganizeName">
+            <summary>
+            所属机构名称
+            </summary> 
+        </member>
+        <member name="T:Clear.UserPermission.Application.Dtos.GetRoleModuleAuthOutputDTO">
+            <summary>
+            获取角色授权的模块或按钮权限
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetRoleModuleAuthOutputDTO.ModuleIds">
+            <summary>
+            角色模块id信息
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetRoleModuleAuthOutputDTO.ModuleAuthIds">
+            <summary>
+            角色模块权限id信息
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetRoleOutputDTO.Id">
+            <summary>
+            主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetRoleOutputDTO.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetRoleOutputDTO.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetRoleOutputDTO.LastModifier">
+            <summary>
+            最后修改人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.GetRoleOutputDTO.LastModifyTime">
+            <summary>
+            最后修改时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.RoleDTO.OrganizeId">
+            <summary>
+            机构主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.RoleDTO.Name">
+            <summary>
+            角色名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.RoleDTO.DataAuthority">
+            <summary>
+            数据权限 0：本人；1：所在部门；2：所在机构
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.RoleDTO.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.RoleDTO.IsEnabled">
+            <summary>
+            是否有效
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.RoleDTO.Description">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="T:Clear.UserPermission.Application.Dtos.SaveRoleModuleAuthInputDTO">
+            <summary>
+            保存角色模块权限信息
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.SaveRoleModuleAuthInputDTO.RoleID">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.SaveRoleModuleAuthInputDTO.ModuleIds">
+            <summary>
+            角色模块id信息
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.SaveRoleModuleAuthInputDTO.ModuleAuthIds">
+            <summary>
+            角色模块权限id信息
+            </summary>
+        </member>
+        <member name="T:Clear.UserPermission.Application.Dtos.SaveRoleUserInputDTO">
+            <summary>
+            保存角色用户信息
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.SaveRoleUserInputDTO.RoleID">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.Dtos.SaveRoleUserInputDTO.UserIds">
+            <summary>
+            角色用户id信息
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.ModuleDto.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.ModuleDto.Code">
+            <summary>
+            编码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.ModuleDto.Name">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.ModuleDto.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.ModuleDto.Icon">
+            <summary>
+            图标
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.ModuleDto.UrlAddress">
+            <summary>
+            导航地址
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.ModuleDto.Target">
+            <summary>
+            导航目标
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.ModuleDto.AllowAutoExpand">
+            <summary>
+            允许自动展开
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.ModuleDto.Description">
+            <summary>
+            描述
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.ModuleDto.IsEnabled">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.ModuleAuthDto.ModuleId">
+            <summary>
+            功能主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.ModuleAuthDto.Code">
+            <summary>
+            编码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.ModuleAuthDto.Name">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.ChangePasswordInput.OldPassword">
+            <summary>
+            旧密码
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.ChangePasswordInput.NewPassword">
+            <summary>
+            新密码
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.ChangePasswordInput.RepeatNewPassword">
+            <summary>
+            重复新密码
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputGetSimpleUsers.OrganizeId">
+            <summary>
+            所属机构
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputGetSimpleUsers.DepartmentId">
+            <summary>
+            所属部门
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputGetSimpleUsers.LoginName">
+            <summary>
+            登录名
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputGetSimpleUsers.UserName">
+            <summary>
+            用户名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.SimpleUserDto.LoginName">
+            <summary>
+            登录名
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.SimpleUserDto.UserName">
+            <summary>
+            用户名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.SimpleUserDto.JobNo">
+            <summary>
+            工号
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.SimpleUserDto.DepartmentName">
+            <summary>
+            部门名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserAuthorizationDto.LoginName">
+            <summary>
+            登录名
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserAuthorizationDto.UserName">
+            <summary>
+            用户名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserAuthorizationDto.IsReset">
+            <summary>
+            是否重置密码
+            </summary> 
+        </member>
+        <member name="T:Clear.UserPermission.Application.ModuleAppService">
+            <summary>
+            模块服务
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Application.ModuleAppService.DeleteModule(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            删除模块
+            </summary>
+            <param name="deleteList">待删除模块的id</param>
+        </member>
+        <member name="M:Clear.UserPermission.Application.ModuleAppService.DeleteModuleAuth(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            获取模块权限列表
+            </summary>
+            <param name="inputDto">入参</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.ModuleAppService.GetAllModules">
+            <summary>
+            获取所有模块列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.ModuleAppService.GetModuleAuths(Clear.UserPermission.Application.Dtos.Modules.GetModuleAuthsInput)">
+            <summary>
+            获取模块权限列表
+            </summary>
+            <param name="inputDto">入参</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.ModuleAppService.InsertModuleAuth(Clear.UserPermission.Application.Dtos.Modules.InsertModuleAuthInput)">
+            <summary>
+            插入模块权限
+            </summary>
+            <param name="inputDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.ModuleAppService.UpdateModuleAuth(Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput)">
+            <summary>
+            更新模块权限
+            </summary>
+            <param name="inputDto"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputCreateUser.OrganizeId">
+            <summary>
+            所属机构
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputCreateUser.LoginName">
+            <summary>
+            登录名
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputCreateUser.UserName">
+            <summary>
+            用户名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputCreateUser.JobNo">
+            <summary>
+            工号
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputCreateUser.Mobile">
+            <summary>
+            手机号码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputCreateUser.EMail">
+            <summary>
+            邮箱
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputCreateUser.ProfessionalLevel">
+            <summary>
+            职级
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputCreateUser.Duty">
+            <summary>
+            职务
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputCreateUser.Remark">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputCreateUser.DepartmentIds">
+            <summary>
+            用户所属部门ID列表
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputGetUsers.OrganizeId">
+            <summary>
+            所属机构
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputGetUsers.DepartmentId">
+            <summary>
+            所属部门
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputGetUsers.LoginName">
+            <summary>
+            登录名
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputGetUsers.UserName">
+            <summary>
+            用户名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputGetUsers.Mobile">
+            <summary>
+            手机号码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputUpdateUser.OrganizeId">
+            <summary>
+            所属机构Id
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputUpdateUser.LoginName">
+            <summary>
+            登录名
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputUpdateUser.UserName">
+            <summary>
+            用户名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputUpdateUser.JobNo">
+            <summary>
+            工号
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputUpdateUser.Mobile">
+            <summary>
+            手机号码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputUpdateUser.EMail">
+            <summary>
+            邮箱
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputUpdateUser.ProfessionalLevel">
+            <summary>
+            职级
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputUpdateUser.Duty">
+            <summary>
+            职务
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputUpdateUser.Remark">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputUpdateUser.IsStop">
+            <summary>
+            是否停用
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.InputUpdateUser.DepartmentIds">
+            <summary>
+            用户所属部门ID列表
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.OrganizeId">
+            <summary>
+            所属机构
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.OrganizeName">
+            <summary>
+            所属机构名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.LoginName">
+            <summary>
+            登录名
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.UserName">
+            <summary>
+            用户名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.JobNo">
+            <summary>
+            工号
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.Mobile">
+            <summary>
+            手机号码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.EMail">
+            <summary>
+            邮箱
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.ProfessionalLevel">
+            <summary>
+            职级代码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.ProfessionalLevelName">
+            <summary>
+            职级名称
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.Duty">
+            <summary>
+            职务代码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.DutyName">
+            <summary>
+            职务名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.Remark">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.IsStop">
+            <summary>
+            是否停用
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.IsReset">
+            <summary>
+            是否重置密码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.Departments">
+            <summary>
+            所属部门
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.UserDto.Roles">
+            <summary>
+            所属角色
+            </summary>
+        </member>
+        <member name="T:Clear.UserPermission.Application.IUserAppService">
+            <summary>
+            用户服务
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IUserAppService.CreateUser(Clear.UserPermission.Application.InputCreateUser)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="input">用户信息</param>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IUserAppService.DeleteUser(System.Guid)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="userId">用户Id</param>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IUserAppService.UpdateUser(Clear.UserPermission.Application.InputUpdateUser)">
+            <summary>
+            更新用户
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IUserAppService.RestUserPassword(System.Guid)">
+            <summary>
+            重置用户密码
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IUserAppService.GetUsers(Clear.UserPermission.Application.InputGetUsers)">
+            <summary>
+            获取用户列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IUserAppService.GetSimpleUsers(Clear.UserPermission.Application.InputGetSimpleUsers)">
+            <summary>
+            获取简单用户信息列表
+            </summary>
+            <param name="input"></param>
+            <returns>接口最多返回50个用户信息</returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IUserAppService.GetUserInfo">
+            <summary>
+            获取用户信息（需要用户已经登陆）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IUserAppService.ChangePassword(Clear.UserPermission.Application.ChangePasswordInput)">
+            <summary>
+            修改用户密码（需要用户已经登陆）
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IUserAppService.Logout">
+            <summary>
+            用户登出
+            </summary>
+        </member>
+        <member name="T:Clear.UserPermission.Application.IDepartmentAppService">
+            <summary>
+            部门管理服务接口
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IDepartmentAppService.AddDepartment(Clear.UserPermission.Application.Dtos.DepartmentDTO)">
+            <summary>
+            添加记录
+            </summary>
+            <param name="entity">添加实体</param>
+            <returns>返回新增记录的主键Id</returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IDepartmentAppService.UpdateDepartment(Clear.UserPermission.Application.Dtos.UpdateDepartmentInputDTO)">
+            <summary>
+            更新记录
+            </summary>
+            <param name="entity">更新实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IDepartmentAppService.DeleteDepartment(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除记录
+            </summary>
+            <param name="ids">删除id列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IDepartmentAppService.GetDepartment(Clear.UserPermission.Application.Dtos.GetDepartmentInputDTO)">
+            <summary>
+            查询记录
+            </summary>
+            <param name="inputDto">查询实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IDepartmentAppService.GetDepartmentByOrganizeId(System.Guid)">
+            <summary>
+            查询记录
+            </summary>
+            <param name="organizeId">查询实体</param>
+            <returns></returns>
+        </member>
+        <member name="T:Clear.UserPermission.Application.IOrganizeAppService">
+            <summary>
+            结构管理服务接口
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IOrganizeAppService.AddOrganize(Clear.UserPermission.Application.Dtos.OrganizeDTO)">
+            <summary>
+            添加机构
+            </summary>
+            <param name="entity">添加实体</param>
+            <returns>返回新增记录的主键Id</returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IOrganizeAppService.UpdateOrganize(Clear.UserPermission.Application.Dtos.UpdateOrganizeInputDTO)">
+            <summary>
+            更新机构信息
+            </summary>
+            <param name="entity">更新实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IOrganizeAppService.DeleteOrganize(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除机构信息
+            </summary>
+            <param name="ids">删除id列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IOrganizeAppService.GetOrganize(Clear.UserPermission.Application.Dtos.GetOrganizeInputDTO)">
+            <summary>
+            查询机构信息
+            </summary>
+            <param name="inputDto">查询实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IOrganizeAppService.GetCurrentUserOrganizes">
+            <summary>
+            获取当前登录用户的机构信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Clear.UserPermission.Application.IRoleAppService">
+            <summary>
+            角色服务接口
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IRoleAppService.AddRole(Clear.UserPermission.Application.Dtos.RoleDTO)">
+            <summary>
+            添加记录
+            </summary>
+            <param name="entity">添加实体</param>
+            <returns>返回新增记录的主键Id</returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IRoleAppService.UpdateRole(Clear.UserPermission.Application.Dtos.UpdateRoleInputDTO)">
+            <summary>
+            更新记录
+            </summary>
+            <param name="entity">更新实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IRoleAppService.DeleteRole(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除记录
+            </summary>
+            <param name="ids">删除id列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IRoleAppService.GetRoles(Clear.UserPermission.Application.Dtos.GetRoleInputDTO)">
+            <summary>
+            查询记录
+            </summary>
+            <param name="inputDto">查询实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IRoleAppService.GetRoleUser(System.String)">
+            <summary>
+            获取角色用户
+            </summary>
+            <param name="roleId">角色</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IRoleAppService.SaveRoleUser(Clear.UserPermission.Application.Dtos.SaveRoleUserInputDTO)">
+            <summary>
+            保存角色用户信息
+            </summary>
+            <param name="dto"></param>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IRoleAppService.GetRoleModuleAuth(System.String)">
+            <summary>
+            获取角色模块和功能权限信息
+            </summary>
+            <param name="roleId">角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IRoleAppService.SaveRoleModuleAuth(Clear.UserPermission.Application.Dtos.SaveRoleModuleAuthInputDTO)">
+            <summary>
+            保存角色模块和模块权限信息
+            </summary>
+            <param name="dto"></param>
+        </member>
+        <member name="T:Clear.UserPermission.Application.OrganizeAppService">
+            <summary>
+            机构应用服务
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Application.OrganizeAppService.AddOrganize(Clear.UserPermission.Application.Dtos.OrganizeDTO)">
+            <summary>
+            添加机构
+            </summary>
+            <param name="entity">添加实体</param>
+            <returns>返回新增记录的主键Id</returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.OrganizeAppService.UpdateOrganize(Clear.UserPermission.Application.Dtos.UpdateOrganizeInputDTO)">
+            <summary>
+            更新机构信息
+            </summary>
+            <param name="entity">更新实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.OrganizeAppService.DeleteOrganize(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除机构信息
+            </summary>
+            <param name="ids">删除id列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.OrganizeAppService.GetOrganize(Clear.UserPermission.Application.Dtos.GetOrganizeInputDTO)">
+            <summary>
+            查询机构信息
+            </summary>
+            <param name="inputDto">查询实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.OrganizeAppService.GetCurrentUserOrganizes">
+            <summary>
+            获取当前登录用户的机构信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Clear.UserPermission.Application.RoleAppService">
+            <summary>
+            角色管理服务
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Application.RoleAppService.AddRole(Clear.UserPermission.Application.Dtos.RoleDTO)">
+            <summary>
+            添加记录
+            </summary>
+            <param name="entity">添加实体</param>
+            <returns>返回新增记录的主键Id</returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.RoleAppService.UpdateRole(Clear.UserPermission.Application.Dtos.UpdateRoleInputDTO)">
+            <summary>
+            更新记录
+            </summary>
+            <param name="entity">更新实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.RoleAppService.DeleteRole(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除记录
+            </summary>
+            <param name="ids">删除id列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.RoleAppService.GetRoles(Clear.UserPermission.Application.Dtos.GetRoleInputDTO)">
+            <summary>
+            查询记录
+            </summary>
+            <param name="inputDto">查询实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.RoleAppService.GetRoleUser(System.String)">
+            <summary>
+            获取角色用户
+            </summary>
+            <param name="roleId">角色</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.RoleAppService.SaveRoleUser(Clear.UserPermission.Application.Dtos.SaveRoleUserInputDTO)">
+            <summary>
+            保存角色用户信息
+            </summary>
+            <param name="dto"></param>
+        </member>
+        <member name="M:Clear.UserPermission.Application.RoleAppService.GetRoleModuleAuth(System.String)">
+            <summary>
+            获取角色模块和功能权限信息
+            </summary>
+            <param name="roleId">角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.RoleAppService.SaveRoleModuleAuth(Clear.UserPermission.Application.Dtos.SaveRoleModuleAuthInputDTO)">
+            <summary>
+            保存角色模块和模块权限信息
+            </summary>
+            <param name="dto"></param>
+        </member>
+        <member name="T:Clear.UserPermission.Application.IModuleAppService">
+            <summary>
+            模块服务
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IModuleAppService.GetAllModules">
+            <summary>
+            获取所有模块列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IModuleAppService.DeleteModule(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            删除模块
+            </summary>
+            <param name="deleteList">待删除模块的id</param>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IModuleAppService.GetModuleAuths(Clear.UserPermission.Application.Dtos.Modules.GetModuleAuthsInput)">
+            <summary>
+            获取模块权限列表
+            </summary>
+            <param name="inputDto">入参</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IModuleAppService.InsertModuleAuth(Clear.UserPermission.Application.Dtos.Modules.InsertModuleAuthInput)">
+            <summary>
+            插入模块权限
+            </summary>
+            <param name="inputDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IModuleAppService.UpdateModuleAuth(Clear.UserPermission.Application.Dtos.Modules.UpdateModuleAuthInput)">
+            <summary>
+            更新模块权限
+            </summary>
+            <param name="inputDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IModuleAppService.DeleteModuleAuth(System.Collections.Generic.List{System.Guid})">
+            <summary>
+            删除模块权限
+            </summary>
+            <param name="deleteList"></param>
+        </member>
+        <member name="M:Clear.UserPermission.Domain.Authorization.HashHelper.CreateRandomSalt">
+            <summary>
+            Create random salt
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Domain.Authorization.HashHelper.ComputeSaltedHash(System.String,System.String)">
+            <summary>
+            Compute salted password hash
+            </summary>
+            <param name="password"></param>
+            <param name="salt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Domain.Authorization.HashHelper.InternalComputeSaltedHash(System.String,System.String)">
+            <summary>
+            Compute salted password hash 以便混淆代码时不暴露外部
+            </summary>
+            <param name="password"></param>
+            <param name="salt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Domain.Authorization.HashHelper.CreateKey(System.String@,System.String@)">
+            <summary>
+            方 法 名：CreateKey
+            方法说明：自动生成非对称公钥、私钥
+            创 建 人：刘国炯
+            创建时间：2017/2/21
+            </summary>
+            <param name="publicKey">返回的公钥</param>
+            <param name="privateKey">返回的私钥</param>
+        </member>
+        <member name="M:Clear.UserPermission.Domain.Authorization.HashHelper.InternalCreateKey(System.String@,System.String@)">
+            <summary>
+            内部自动生成非对称公钥、私钥 以便混淆代码时不暴露外部
+            </summary>
+            <param name="publicKey"></param>
+            <param name="privateKey"></param>
+        </member>
+        <member name="M:Clear.UserPermission.Domain.Authorization.HashHelper.RSAEncrypt(System.String,System.String)">
+            <summary>
+            方 法 名：RSAEncrypt
+            方法说明：非对称加密方法
+            创 建 人：刘国炯
+            创建时间：2017/2/21
+            </summary>
+            <param name="strMsg">要加密的数据</param>
+            <param name="publicKey">加密的公钥</param>
+            <returns>返回加密后的byte[]数据</returns>
+        </member>
+        <member name="M:Clear.UserPermission.Domain.Authorization.HashHelper.InternalRSAEncrypt(System.String,System.String)">
+            <summary>
+            方 法 名：InternalRSAEncrypt
+            方法说明：非对称加密方法  以便混淆代码时不暴露外部
+            创 建 人：刘国炯  
+            创建时间：2017/2/21
+            </summary>
+            <param name="strMsg">The STR MSG.</param>
+            <param name="publicKey">The public key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Domain.Authorization.HashHelper.RSADecrypt(System.String,System.String)">
+            <summary>
+            方 法 名：RSADecrypt
+            方法说明：非对称解密方法  
+            创 建 人：刘国炯
+            创建时间：2017/2/21
+            </summary>
+            <param name="strMsg">需要解密的字符串</param>
+            <param name="privateKey">解密的私钥</param>
+            <returns>解密后的数据string类型</returns>
+        </member>
+        <member name="M:Clear.UserPermission.Domain.Authorization.HashHelper.InternalRSADecrypt(System.String,System.String)">
+            <summary>
+            方 法 名：InternalRSADecrypt
+            方法说明：非对称解密方法  以便混淆代码时不暴露外部
+            创 建 人：刘国炯
+            创建时间：2017/2/21
+            </summary>
+            <param name="strMsg">The STR MSG.</param>
+            <param name="privateKey">The private key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Domain.Authorization.HashHelper.GetMD5Hash(System.String)">
+            <summary>
+            获取MD5串
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Clear.UserPermission.Domain.Authorization.ISsoService">
+            <summary>
+            SSO相关服务
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Domain.Authorization.ISsoService.BindAccount(System.String,System.String)">
+            <summary>
+            SSO回调绑定接口
+            </summary>
+            <param name="userId">SSO用户ID</param>
+            <param name="appId">在SSO的应用ID</param>
+        </member>
+        <member name="M:Clear.UserPermission.Domain.Authorization.SSOAuthorization.BindAccount(System.String,System.String)">
+            <summary>
+            SSO回调绑定接口
+            </summary>
+            <param name="userId">SSO用户ID</param>
+            <param name="appId">在SSO的应用ID</param>
+        </member>
+        <member name="T:Clear.UserPermission.Entities.Department">
+            <summary>
+            机构部门表
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.OrganizeId">
+            <summary>
+            机构主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.Name">
+            <summary>
+            部门名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.ManagerId">
+            <summary>
+            负责人主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.Phone">
+            <summary>
+            联系电话
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.Email">
+            <summary>
+            电子邮件
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.Fax">
+            <summary>
+            部门传真
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.Layer">
+            <summary>
+            层
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.Description">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.LastModifier">
+            <summary>
+            最后修改人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.LastModifyTime">
+            <summary>
+            最后修改时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Department.Users">
+            <summary>
+            用户列表
+            </summary>
+        </member>
+        <member name="T:Clear.UserPermission.Entities.Module">
+            <summary>
+            系统功能模块表
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.Code">
+            <summary>
+            编码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.Name">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.Icon">
+            <summary>
+            图标
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.UrlAddress">
+            <summary>
+            导航地址
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.Target">
+            <summary>
+            导航目标
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.AllowAutoExpand">
+            <summary>
+            允许自动展开
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.AllowEdit">
+            <summary>
+            允许编辑
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.AllowDelete">
+            <summary>
+            允许删除
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.IsEnabled">
+            <summary>
+            是否有效
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.Description">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.LastModifier">
+            <summary>
+            最后修改人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.LastModifyTime">
+            <summary>
+            最后修改时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Module.ModuleAuths">
+            <summary>
+            模块权限
+            </summary>
+        </member>
+        <member name="T:Clear.UserPermission.Entities.ModuleAuth">
+            <summary>
+            系统功能按钮表
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.ModuleAuth.ModuleId">
+            <summary>
+            功能主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.ModuleAuth.Code">
+            <summary>
+            编码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.ModuleAuth.Name">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.ModuleAuth.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.ModuleAuth.WebAPI">
+            <summary>
+            API方法
+            </summary> 
+        </member>
+        <!-- 对于成员“T:Clear.UserPermission.Entities.Organize”忽略有格式错误的 XML 注释 -->
+        <member name="F:Clear.UserPermission.Entities.Organize.DEFAULT_TOP_ORGANIZECODE">
+            <summary>
+            默认的顶级机构编码
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.ParentId">
+            <summary>
+            父级主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Code">
+            <summary>
+            机构代码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Name">
+            <summary>
+            机构名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Nature">
+            <summary>
+            机构性质
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Phone">
+            <summary>
+            电话
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Fax">
+            <summary>
+            传真
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Postalcode">
+            <summary>
+            邮编
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Email">
+            <summary>
+            电子邮箱
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.ManagerId">
+            <summary>
+            负责人主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Address">
+            <summary>
+            详细地址
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.WebAddress">
+            <summary>
+            公司官网
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.FoundedTime">
+            <summary>
+            成立时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Layer">
+            <summary>
+            层
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.IsDeleted">
+            <summary>
+            是否删除
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Description">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.LastModifier">
+            <summary>
+            最后修改人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.LastModifyTime">
+            <summary>
+            最后修改时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Departments">
+            <summary>
+            机构部门信息
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Roles">
+            <summary>
+            机构角色信息
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Organize.Users">
+            <summary>
+            机构用户信息
+            </summary>
+        </member>
+        <member name="T:Clear.UserPermission.Entities.Role">
+            <summary>
+            角色信息表
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Role.OrganizeId">
+            <summary>
+            机构主键
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Role.Name">
+            <summary>
+            角色名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Role.DataAuthority">
+            <summary>
+            数据权限 0：本人；1：所在部门；2：所在机构
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Role.SortCode">
+            <summary>
+            排序码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Role.IsEnabled">
+            <summary>
+            是否有效
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Role.Description">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Role.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Role.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Role.LastModifier">
+            <summary>
+            最后修改人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Role.LastModifyTime">
+            <summary>
+            最后修改时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Role.Users">
+            <summary>
+            角色用户列表
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Role.ModuleAuths">
+            <summary>
+            权限列表
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Entities.Role.Modules">
+            <summary>
+            菜单列表
+            </summary>
+        </member>
+        <member name="T:Clear.UserPermission.Entities.User">
+            <summary>
+            系统用户
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.OrganizeId">
+            <summary>
+            所属机构
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.LoginName">
+            <summary>
+            登录名
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.UserName">
+            <summary>
+            用户名称
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.JobNo">
+            <summary>
+            工号
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.Password">
+            <summary>
+            用户密码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.Salt">
+            <summary>
+            密码Salt
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.Mobile">
+            <summary>
+            手机号码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.EMail">
+            <summary>
+            邮箱
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.ProfessionalLevel">
+            <summary>
+            职级
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.Duty">
+            <summary>
+            职务
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.Remark">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.IsStop">
+            <summary>
+            是否停用
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.IsDeleted">
+            <summary>
+            是否删除
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.IsReset">
+            <summary>
+            是否重置密码
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.Creator">
+            <summary>
+            创建人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.LastModifier">
+            <summary>
+            最后修改人
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.LastModifyTime">
+            <summary>
+            最后修改时间
+            </summary> 
+        </member>
+        <member name="P:Clear.UserPermission.Entities.User.Departments">
+            <summary>
+            部门列表
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Entities.User.RestDefaultPassword">
+            <summary>
+            重置成默认密码
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Entities.User.CheckPassword(System.String)">
+            <summary>
+            检查密码是否正确
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Entities.User.SetNewPassword(System.String)">
+            <summary>
+            设置新密码
+            </summary>
+            <param name="newPassword"></param>
+        </member>
+        <member name="M:Clear.UserPermission.EntityFramework.Repositories.OrganizeRepository.CanNotDeleteDefaultTopOrganize(Clear.UserPermission.Entities.Organize)">
+            <summary>
+            不能删除默认顶级机构
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:Clear.UserPermission.EntityFramework.Repositories.OrganizeRepository.ThereIsOnlyOneTopOrganize(System.Nullable{System.Guid},System.Nullable{System.Guid})">
+            <summary>
+            只能有一个顶级机构
+            </summary>
+            <param name="organizeId">机构ID</param>
+            <param name="parentOrganizeId">上级机构ID</param>
+        </member>
+        <member name="M:Clear.UserPermission.EntityFramework.Repositories.UserRepository.CanNotDeleteOwnUser(Clear.UserPermission.Entities.User)">
+            <summary>
+            不能删除用户自身
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.EntityFramework.Repositories.UserRepository.CanNotDeleteDefaultSystemUser(Clear.UserPermission.Entities.User)">
+            <summary>
+            不能删除默认管理员用户
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.EntityFramework.UserPermissionDbContext.#ctor">
+            <summary>
+            Constructor.
+            Uses <see cref="!:IAbpStartupConfiguration.DefaultNameOrConnectionString"/> as connection string.
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.EntityFramework.UserPermissionDbContext.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.EntityFramework.UserPermissionDbContext.#ctor(System.Data.Entity.Infrastructure.DbCompiledModel)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.EntityFramework.UserPermissionDbContext.#ctor(System.Data.Common.DbConnection,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.EntityFramework.UserPermissionDbContext.#ctor(System.String,System.Data.Entity.Infrastructure.DbCompiledModel)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.EntityFramework.UserPermissionDbContext.#ctor(System.Data.Entity.Core.Objects.ObjectContext,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.EntityFramework.UserPermissionDbContext.#ctor(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.DbCompiledModel,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+    </members>
+</doc>

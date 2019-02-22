@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <script language="javascript" type="text/javascript">
+    function transmitDataFunction(object)
+    {
+      for ( var i = 0;i< object.length;i++) { 
+        var Element=document.getElementById(object[i].itemKey);
+        if(Element && object[i].itemValue!=null)
+          Element.innerHTML = object[i].itemValue;
+      }
+    }
+  </script>
+  <body>
+    <!-- style="margin-left:150px;" -->
+    <div id='div' align="center">
+        <table border="1" width="500" style="border-collapse:ollapse; table-layout:fixed; border-style: solid; border-width: 2px; border-color:  rgb(0%,0%,0%)">
+          <caption>
+          <h1><span></span>预交金报表</h1>
+          <p>时间：
+            <span id="SettleStartTime">yyyy-MM-dd HH:mm:ss</span>&nbsp至&nbsp<span id="SettleEndTime">yyyy-MM-dd HH:mm:ss</span>
+          </p>
+          </caption>
+          <tr bgcolor="#00FF00"><th>项目</th><th>金额</th></tr>
+          <tr><td>预交金</td><td><span id="Recharge"></span></td></tr>
+          <tr><td>退费</td><td><span id="Refund"></span></td></tr>
+          <tr><td>总计</td><td><span id="Total"></span></td></tr>
+          <tr><td>总计（大写）</td><td><span id="ChineseTotal"></span></td></tr>
+          <tr><td>现金</td><td><span id="Cash"></span></td></tr>
+          
+          <tr><td>银联</td><td><span id="UnionPay"></span></td></tr>          
+          <tr><td>微信</td><td><span id="WeChat"></span></td></tr>
+          <tr><td>支付宝</td><td><span id="Alipay"></span></td></tr>
+        </table>
+        <p>
+          制表人：&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          审核人：&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          收款人：（签名）
+        </p>
+      </div>
+  </body>
+</html>

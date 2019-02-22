@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PluginConfig>
+  <Plugin Name="全院插件">
+    <!--是否启用 true 启用 false 停用-->
+    <Enabled>false</Enabled>
+    <!--插件程序集文件名称-->
+    <AssemblyFile>Clear.HSPSPlugin.dll</AssemblyFile>
+    <!--插件包下载地址-->
+    <PackUrl>{homeurl}/ClientFile/Plugins/HSPSPlugin.zip</PackUrl>
+    <!--插件包版本-->
+    <PackVersion>1.0.0.0</PackVersion>
+  </Plugin>
+</PluginConfig>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ClientConfig>
+  <!--客户端安装GUID，不同产品不同 -->
+  <ClientId></ClientId>
+  <!--客户端名称-->
+  <ClientTitle></ClientTitle>
+  <!--是否允许输入地址-->
+  <UrlEnabled>false</UrlEnabled>
+  <!--首页-->
+  <HomeUrl>{HomeUrl}</HomeUrl>
+  <!--插件下载文件地址-->
+  <PluginUrl>{HomeUrl}/clientfile/plugin.xml</PluginUrl>
+  <!--升级文件下载地址-->
+  <UpdateURL>{HomeUrl}/clientfile/Update.xml</UpdateURL>
+</ClientConfig>
