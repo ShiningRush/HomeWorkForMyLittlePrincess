@@ -1,0 +1,40 @@
+build                 -- webpack打包时用的配置文件
+config               -- 运行时的配置文件
+dist                   -- 执行npn run build 会生成浏览器可运行的静态html文件
+node_modules  -- npm安装依赖之后形成的包目录
+src                    -- 项目代码文件
+  -api                -- 所有访问服务端的api接口都应该预先定义在这里
+  -assets            -- 资源文件，一般用于存放图片(png, jpg)
+  -components  -- 封装的通用vue组件
+  -icons             -- 用于存放矢量图标(svg)
+  -json               -- 测试数据，无用
+  -router            -- vue的路由配置，请阅读 https://cn.vuejs.org/v2/guide/routing.html，如果难以理解，请先了解"MPA与SPA"
+  -store              -- vuex 的配置， 请阅读 https://cn.vuejs.org/v2/guide/state-management.html
+  -styles             -- 存放一些用于全局的style，如果仅仅用于局部，请添加在vue的子组件当中
+  -utils               -- 一些通用的 js 函数，通过webpack的import 与 export 提供使用
+  -views             -- 所有页面文件都应该存放在该文件夹下面
+  App.vue          -- 最顶层的vue组件，其他页面都是它的子组件
+  main.js            -- 入口js文件
+  permission.js   -- 用于判断用户权限的js函数
+  -static             -- 一些需要在webpack打包时不压缩也解析的原生静态文件，它们会直接输出到dist中
+  index.html      -- 初始化页面, 在webpack打包后会自动注入一些引用
+  package.json  -- npm包配置文件，里面包含了所有项目的依赖，以及一些可执行的命令 在 "scripts" 节点中， 你可以使用 npm run xxxx(命令) 来运行它们
+  * 其他文件请无视
+
+dev调试方法：使用 npm run dev 来调试该项目，它会在你本地新起一个nodejs 的服务器来承载你的web代码。
+打开chrome的source tab页，你可以找到一个名叫 webpack://的路径，它就是你的源代码，可以直接断点打入里面
+
+执行 npm run dev时，nodejs做了什么？
+1，你可以查看 package.json 当中 scripts 的 dev 命令，它就是就是在控制台运行了：node build/dev-server.js
+2，打开build/dev-server.js 你会发现这是一个完整的nodejs代码，它使用webpack对项目代码模块进行了预处理，同时启动了一个本地服务器来监听浏览器请求
+3，webpack会按照 webpack.dev.conf.js 中的配置内容来进行预处理
+
+后端接口文档查看方法，请直接访问：http://localhost:10423/swagger/ui/index#/
+robot接口，
+点击Model可以查看具体解释，
+如果需要在线调试，需要授权，点击 Response Class (Status 200) 右边的感叹号，
+username: admin
+password: 123456
+type : base auth
+里面的内容为空
+点击login，发现感叹号变为蓝色，证明授权成功，可以开始调试接口。

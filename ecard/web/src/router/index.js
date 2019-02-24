@@ -68,13 +68,14 @@ export const constantRouterMap = [{
         children: [
             { path: 'orgManage', name: '机构管理', component: _import('systemManage/orgManage') },
             { path: 'deptManage', name: '部门管理', component: _import('systemManage/deptManage') },
+            { path: 'robotManage', name: '机器人管理', component: _import('systemManage/robotManage') },
             { path: 'userManage', name: '用户管理', component: _import('systemManage/userManage') },
             { path: 'rolePermsManage', name: '角色与权限管理', component: _import('systemManage/rolePermsManage') },
             { path: 'menuManage', name: '菜单管理', component: _import('systemManage/menuManage') },
             { path: 'dicManage', name: '字典管理', component: _import('systemManage/dicManage') },
             { path: 'logManage', name: '日志管理', component: _import('systemManage/logManage') },
             { path: 'appManage', name: '应用管理', component: _import('systemManage/appManage') }
-        ]
+        ]  
     },
     { path: '*', redirect: '/404', hidden: true }
 ]

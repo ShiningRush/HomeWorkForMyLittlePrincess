@@ -10,8 +10,6 @@ export function addOrganize(form) {
 
 }
 
-
-
 export function updateOrganize(form) {
     return fetch({
         url: '/organize/UpdateOrganize',
