@@ -158,6 +158,7 @@
     <Compile Include="Application\Dtos\Users\SimpleUserDto.cs" />
     <Compile Include="Application\Dtos\Users\UserAuthorizationDto.cs" />
     <Compile Include="Application\ModuleAppService.cs" />
+    <Compile Include="Application\RobotAppService.cs" />
     <Compile Include="Application\UserAppService.cs" />
     <Compile Include="Application\Dtos\Users\InputCreateUser.cs" />
     <Compile Include="Application\Dtos\Users\InputGetUsers.cs" />
@@ -176,6 +177,7 @@
     <Compile Include="Domain\Entities\Module.cs" />
     <Compile Include="Domain\Entities\ModuleAuth.cs" />
     <Compile Include="Domain\Entities\Organize.cs" />
+    <Compile Include="Domain\Entities\Robots.cs" />
     <Compile Include="Domain\Entities\Role.cs" />
     <Compile Include="Domain\Entities\User.cs" />
     <Compile Include="Application\IDepartmentAppService.cs" />
@@ -191,6 +193,10 @@
     <Compile Include="EntityFramework\Migrations\201712210748331_V1.0.1_Initial.cs" />
     <Compile Include="EntityFramework\Migrations\201712210748331_V1.0.1_Initial.Designer.cs">
       <DependentUpon>201712210748331_V1.0.1_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Migrations\201902221709033_V1.0.2.cs" />
+    <Compile Include="EntityFramework\Migrations\201902221709033_V1.0.2.Designer.cs">
+      <DependentUpon>201902221709033_V1.0.2.cs</DependentUpon>
     </Compile>
     <Compile Include="EntityFramework\Repositories\BaseOrganizeRepository.cs" />
     <Compile Include="EntityFramework\Repositories\BaseUserRepository.cs" />
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EntityFramework\Migrations\201712210748331_V1.0.1_Initial.resx">
       <DependentUpon>201712210748331_V1.0.1_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntityFramework\Migrations\201902221709033_V1.0.2.resx">
+      <DependentUpon>201902221709033_V1.0.2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EntityFramework\Migrations\Initial.sql" />
   </ItemGroup>

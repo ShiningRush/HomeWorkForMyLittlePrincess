@@ -45,7 +45,7 @@ namespace Abp.WebApi.Controllers.Dynamic.Interceptors
                 try
                 {
                     // *King
-                    //var dm = new DynamicMethod("test", invocation.Method.ReturnType, invocation.Method.GetParameters().Select(p=>p.ParameterType).ToArray());
+                    //var dm = new DynamicMethod("test", invocation.Method.ReturnType, invocation.Method.GetParameters().Select(p=>p.ParameterType).ToAr-ray());
                     //var il = dm.GetILGenerator();
                     //il.EmitCall(OpCodes.Call, invocation.Method, null);
                     //dm.Invoke(_proxiedObject, invocation.Arguments);

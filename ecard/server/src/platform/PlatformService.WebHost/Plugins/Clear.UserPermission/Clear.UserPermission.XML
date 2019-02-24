@@ -849,6 +849,116 @@
             <param name="inputDto"></param>
             <returns></returns>
         </member>
+        <member name="P:Clear.UserPermission.Application.GetRobotsInput.Name">
+            <summary>
+            机器人名称
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.GetRobotsInput.DepartmentId">
+            <summary>
+            部门ID
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.GetRobotsOutput.Id">
+            <summary>
+            机器人Id
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.GetRobotsOutput.Name">
+            <summary>
+            机器人名称
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.GetRobotsOutput.DepartmentId">
+            <summary>
+            部门ID
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.GetRobotsOutput.Description">
+            <summary>
+            机器人描述
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.GetRobotsOutput.IsValid">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.InsertOrUpdateRobotInput.Id">
+            <summary>
+            机器人Id
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.InsertOrUpdateRobotInput.Name">
+            <summary>
+            机器人名称
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.InsertOrUpdateRobotInput.DepartmentId">
+            <summary>
+            部门ID
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.InsertOrUpdateRobotInput.Description">
+            <summary>
+            机器人描述
+            </summary>
+        </member>
+        <member name="P:Clear.UserPermission.Application.InsertOrUpdateRobotInput.IsValid">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="T:Clear.UserPermission.Application.IRobotAppService">
+            <summary>
+            机器人服务
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IRobotAppService.GetRobots(Clear.UserPermission.Application.GetRobotsInput)">
+            <summary>
+            获取机器人
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IRobotAppService.InsertOrUpdateRobot(Clear.UserPermission.Application.InsertOrUpdateRobotInput)">
+            <summary>
+            插入或更新机器人
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.IRobotAppService.DeleteRobot(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            删除机器人
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="T:Clear.UserPermission.Application.RobotAppService">
+            <summary>
+            机器人服务
+            </summary>
+        </member>
+        <member name="M:Clear.UserPermission.Application.RobotAppService.DeleteRobot(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            删除机器人
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:Clear.UserPermission.Application.RobotAppService.GetRobots(Clear.UserPermission.Application.GetRobotsInput)">
+            <summary>
+            获取机器人
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Clear.UserPermission.Application.RobotAppService.InsertOrUpdateRobot(Clear.UserPermission.Application.InsertOrUpdateRobotInput)">
+            <summary>
+            插入或更新机器人
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
         <member name="P:Clear.UserPermission.Application.InputCreateUser.OrganizeId">
             <summary>
             所属机构
@@ -1507,6 +1617,11 @@
             </summary>
             <param name="userId">SSO用户ID</param>
             <param name="appId">在SSO的应用ID</param>
+        </member>
+        <member name="P:Clear.UserPermission.Domain.Entities.Robot.DepartmentId">
+            <summary>
+            所属部门
+            </summary> 
         </member>
         <member name="T:Clear.UserPermission.Entities.Department">
             <summary>

@@ -14,6 +14,7 @@ using System.Data.Entity.ModelConfiguration.Configuration;
 using PlatformService.BridgeComponent.CustomException;
 using EntityFramework.DynamicFilters;
 using Abp.Domain.Entities;
+using Clear.UserPermission.Domain.Entities;
 
 namespace Clear.UserPermission.EntityFramework
 {
@@ -25,6 +26,7 @@ namespace Clear.UserPermission.EntityFramework
         public DbSet<Organize> Organizes { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Robot> Robots { get; set; }
 
 
         /// <summary>
